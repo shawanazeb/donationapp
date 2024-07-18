@@ -129,7 +129,7 @@ class _MyRegisterState extends State<MyRegister> {
                             child: TextButton(
                               onPressed: () {
                                 TextButton.styleFrom(
-                                  primary: Colors.red,
+                                  foregroundColor: Colors.red,
                                 );
                                 Navigator.push(context,
                                   MaterialPageRoute(builder:

@@ -83,7 +83,7 @@ class _fgdpswdState extends State<fgtpswdd> {
                             child: TextButton(
                               onPressed: () {
                                 TextButton.styleFrom(
-                                  primary: Colors.red,
+                                  foregroundColor: Colors.red,
                                 );
                                 Navigator.push(context,
                                   MaterialPageRoute(builder:

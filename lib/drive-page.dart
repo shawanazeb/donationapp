@@ -107,7 +107,7 @@ Donation Drive""",
                           style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20)),
-                            primary: Colors.grey,
+                            foregroundColor: Colors.grey,
                             textStyle:
                             TextStyle(fontSize: 15, color: Colors.black),
                           ),

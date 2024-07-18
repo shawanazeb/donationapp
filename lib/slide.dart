@@ -1,7 +1,6 @@
-class Slide{
-  String image;
-  String heading;
+class Slide {
+  final String image;
+  final String heading;
 
-  Slide(this.image,this.heading);
-
+  Slide(this.image, this.heading);
 }

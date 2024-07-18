@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 void main() => runApp(const MaterialApp(
   home: Test(),
 ));
@@ -16,204 +17,137 @@ class _TestState extends State<Test> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text('Donation Drives'),
-          backgroundColor: Colors.black,
-
-          actions: <Widget> [
-            const Positioned.fill(
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Recent",
-                    style: TextStyle(color: Colors.white, fontSize: 12),
-                  ),
-                )),
-            IconButton(
-                onPressed: (){},
-                icon: const Icon(Icons.arrow_drop_down), alignment: Alignment.centerRight)]),
+        title: const Text('Donation Drives'),
+        backgroundColor: Colors.black,
+        actions: <Widget>[
+          const Align(
+            alignment: Alignment.center,
+            child: Text(
+              "Recent",
+              style: TextStyle(color: Colors.white, fontSize: 12),
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.arrow_drop_down),
+          ),
+        ],
+      ),
       body: Center(
-          child: Stack(
-              children:<Widget>[
-                Container(
-                    height:700,
-                    width:1100,
-                    child: Image.asset("""
-assets/Image6.png""", fit: BoxFit.fill)),
-                Column(
+        child: Stack(
+          children: <Widget>[
+            Container(
+              height: 700,
+              width: 1100,
+              child: Image.asset(
+                "assets/Image6.png",
+                fit: BoxFit.fill,
+              ),
+            ),
+            Column(
+              children: <Widget>[
+                Padding(padding: EdgeInsets.all(10.0)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    Padding(padding: EdgeInsets.all(10.0)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        Text("""Old Age Home Donation
+                    Text(
+                      """Old Age Home Donation
 12th sept""",
-                            style: TextStyle(
-                              fontWeight:const FontWeight.normal,
-                              fontSize: 18,
-                              color: Colors.white,
-                            )
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        fontSize: 18,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        IconButton(
+                          icon: const Icon(
+                            Icons.share,
+                            color: Colors.white,
+                            size: 15,
+                          ),
+                          onPressed: () {},
                         ),
-
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget>[
-                            IconButton(
-                                icon: const Icon(
-                                  Icons.share,
-                               color: Colors.white,
-                                  size: 15,
-                                ),
-                                onPressed: () {}
-                            ),
-                            CupertinoButton(
-                              minSize: double.minPositive,
-                              padding: EdgeInsets.zero,
-                              child:const Icon(
-                                Icons.bookmark,
-                                color: Colors.white,
-                                size: 15,
-                              ),
-                              onPressed: () {},
-                            ),
-                          ],
+                        CupertinoButton(
+                          minSize: double.minPositive,
+                          padding: EdgeInsets.zero,
+                          child: const Icon(
+                            Icons.bookmark,
+                            color: Colors.white,
+                            size: 15,
+                          ),
+                          onPressed: () {},
                         ),
                       ],
                     ),
                   ],
                 ),
-                Container(child: Align(alignment: Alignment.bottomCenter
-                    children: [
-                    IconButton(
-                    onPressed: (){},
-                    icon: const Icon(Icons.arrow_drop_down)),
-              ] ),
-
-          Column(
-            children: <Widget>[
-              Padding(padding: EdgeInsets.all(90.0)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Text("""Old Age Home Donation
-10th sept""",
-                     style: TextStyle(
-                        fontWeight:FontWeight.normal,
-                        fontSize: 18,
-                        color: Colors.white,
-                      )
+              ],
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Column(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.arrow_drop_down),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      IconButton(
-                          icon: Icon(
-                            Icons.share,
-                            color: Colors.white,
-                            size: 15,
-                          ),
-                          onPressed: () {}
-                      ),
-                      CupertinoButton(
-                        minSize: double.minPositive,
-                        padding: EdgeInsets.zero,
-                        child: Icon(
-                          Icons.bookmark,
-                          color: Colors.white,
-                          size: 15,
-                        ),
-                        onPressed: () {},
-                      ),
-                    ],
-                  ),
+                  buildDonationRow("10th sept"),
+                  buildDonationRow("8th sept"),
+                  buildDonationRow("6th sept"),
                 ],
               ),
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              Padding(padding: EdgeInsets.all(165.0)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Text("""Old Age Home Donation
-8th sept""",
-                    const  style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 18,
-                        color: Colors.white,
-                      )
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      IconButton(
-                          icon:const Icon(
-                            Icons.share,
-                            color: Colors.white,
-                            size: 15,
-                          ),
-                          onPressed: () {}
-                      ),
-                      CupertinoButton(
-                        minSize: double.minPositive,
-                        padding: EdgeInsets.zero,
-                        child:const Icon(
-                          Icons.bookmark,
-                          color: Colors.white,
-                          size: 15,
-                        ),
-                        onPressed: () {},
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              Padding(padding: EdgeInsets.all(245.0)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Text("""Old Age Home Donation
-6th sept""",
-                      style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 18,
-                        color: Colors.white,
-                      )
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      IconButton(
-                          icon: Icon(
-                            Icons.share,
-                            color: Colors.white,
-                            size: 15,
-                          ),
-                          onPressed: () {}
-                      ),
-                      CupertinoButton(
-                        minSize: double.minPositive,
-                        padding: EdgeInsets.zero,
-                        child:const Icon(
-                          Icons.bookmark,
-                          color: Colors.white,
-                          size: 15,
-                        ),
-                        onPressed: () {},
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
-          ]),
-    ));
-
+  Widget buildDonationRow(String date) {
+    return Column(
+      children: <Widget>[
+        Padding(padding: EdgeInsets.all(90.0)),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Text(
+              """Old Age Home Donation
+$date""",
+              style: const TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 18,
+                color: Colors.white,
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                IconButton(
+                  icon: const Icon(
+                    Icons.share,
+                    color: Colors.white,
+                    size: 15,
+                  ),
+                  onPressed: () {},
+                ),
+                CupertinoButton(
+                  minSize: double.minPositive,
+                  padding: EdgeInsets.zero,
+                  child: const Icon(
+                    Icons.bookmark,
+                    color: Colors.white,
+                    size: 15,
+                  ),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ],
+        ),
+      ],
+    );
   }
 }

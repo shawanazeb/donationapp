@@ -1,4 +1,4 @@
-name: donationapp
+name:  untitled
 description: A new Flutter project.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -24,7 +24,10 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  assets:
-    - assets/slider.png
-    - assets/donation.png
-    - assets/volunteer.png
+     assets:
+    - assets/banner.png
+    - assets/bg4.jpg
+    - assets/food-donate.png
+    - assets/cloth-donation.png
+    - assets/heart-donate.png
+    - assets/food.png

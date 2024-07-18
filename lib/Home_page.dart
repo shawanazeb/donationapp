@@ -152,7 +152,7 @@ class Home extends StatelessWidget {
                       child: const Text('See All Categories'),
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.grey,
+                        backgroundColor: Colors.grey,
                         textStyle: const TextStyle(
                           fontSize: 25,
                         ),
